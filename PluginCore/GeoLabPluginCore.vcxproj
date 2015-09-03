@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{ADD307AC-266B-355B-BD35-932B09D6AEA3}</ProjectGuid>
+    <RootNamespace>GeoLabPluginCore</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <PlatformToolSet>v120</PlatformToolSet>
+    <OutputDirectory>..\..\build\Release\bin\vs2013\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>GeoLabPluginCore</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <PlatformToolSet>v120</PlatformToolSet>
+    <OutputDirectory>..\..\build\Debug\bin\vs2013\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>GeoLabPluginCored</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\build\Release\bin\vs2013\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">GeoLabPluginCore</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\build\Debug\bin\vs2013\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">GeoLabPluginCored</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>".";"..";"..\..";"..\..\3rdparty\include";"D:\qt\5.4\msvc2013_opengl\include";"D:\qt\5.4\msvc2013_opengl\include\QtOpenGL";"D:\qt\5.4\msvc2013_opengl\include\QtWidgets";"D:\qt\5.4\msvc2013_opengl\include\QtGui";"D:\qt\5.4\msvc2013_opengl\include\QtCore";"release";"D:\qt\5.4\msvc2013_opengl\mkspecs\win32-msvc2013";%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 -Zc:strictStrings -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;GCL_EXPORT_SHARED_LIB;GCL_PLUGIN_SHARED_LIB;OM_STATIC_BUILD;_USE_MATH_DEFINES;QT_NO_DEBUG;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>gdi32.lib;user32.lib;opengl32.lib;glu32.lib;"D:\Computer Graphics\Summer Project\GeoLab-dev\src\PluginCore\..\..\build\Release\bin\vs2013\\GeoLabCore.lib";"D:\Computer Graphics\Summer Project\GeoLab-dev\src\PluginCore\..\..\3rdparty\lib\OpenMesh\vs2013\\OpenMeshCore.lib";$(QTDIR)\lib\Qt5OpenGL.lib;$(QTDIR)\lib\Qt5Widgets.lib;$(QTDIR)\lib\Qt5Gui.lib;$(QTDIR)\lib\Qt5Core.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;"D:\Computer Graphics\Summer Project\GeoLab-dev\src\PluginCore\..\..\build\Release\bin\vs2013\";"D:\Computer Graphics\Summer Project\GeoLab-dev\src\PluginCore\..\..\3rdparty\lib\OpenMesh\vs2013\";D:\qt\5.4\msvc2013_opengl\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkDLL>true</LinkDLL>
+      <LinkIncremental>false</LinkIncremental>
+      <OutputFile>$(OutDir)\GeoLabPluginCore.dll</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;GCL_EXPORT_SHARED_LIB;GCL_PLUGIN_SHARED_LIB;OM_STATIC_BUILD;_USE_MATH_DEFINES;QT_NO_DEBUG;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>".";"..";"..\..";"..\..\3rdparty\include";"D:\qt\5.4\msvc2013_opengl\include";"D:\qt\5.4\msvc2013_opengl\include\QtOpenGL";"D:\qt\5.4\msvc2013_opengl\include\QtWidgets";"D:\qt\5.4\msvc2013_opengl\include\QtGui";"D:\qt\5.4\msvc2013_opengl\include\QtCore";"debug";"D:\qt\5.4\msvc2013_opengl\mkspecs\win32-msvc2013";%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;GCL_EXPORT_SHARED_LIB;GCL_PLUGIN_SHARED_LIB;OM_STATIC_BUILD;_USE_MATH_DEFINES;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>gdi32.lib;user32.lib;opengl32.lib;glu32.lib;"D:\Computer Graphics\Summer Project\GeoLab-dev\src\PluginCore\..\..\build\Debug\bin\vs2013\\GeoLabCored.lib";"D:\Computer Graphics\Summer Project\GeoLab-dev\src\PluginCore\..\..\3rdparty\lib\OpenMesh\vs2013\\OpenMeshCored.lib";$(QTDIR)\lib\Qt5OpenGLd.lib;$(QTDIR)\lib\Qt5Widgetsd.lib;$(QTDIR)\lib\Qt5Guid.lib;$(QTDIR)\lib\Qt5Cored.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;"D:\Computer Graphics\Summer Project\GeoLab-dev\src\PluginCore\..\..\build\Debug\bin\vs2013\";"D:\Computer Graphics\Summer Project\GeoLab-dev\src\PluginCore\..\..\3rdparty\lib\OpenMesh\vs2013\";D:\qt\5.4\msvc2013_opengl\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkDLL>true</LinkDLL>
+      <OutputFile>$(OutDir)\GeoLabPluginCored.dll</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;GCL_EXPORT_SHARED_LIB;GCL_PLUGIN_SHARED_LIB;OM_STATIC_BUILD;_USE_MATH_DEFINES;QT_OPENGL_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Debug\moc_ImageIOInterface.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_MeshFilterInterface.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_MeshIOInterface.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_NormalPluginInterface.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_PluginInterface.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_PluginManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="PluginInterface\ImageIOInterface.cpp" />
+    <ClCompile Include="PluginInterface\MeshFilterInterface.cpp" />
+    <ClCompile Include="PluginInterface\MeshIOInterface.cpp" />
+    <ClCompile Include="PluginInterface\NormalPluginInterface.cpp" />
+    <ClCompile Include="PluginInterface\PluginInterface.cpp" />
+    <ClCompile Include="PluginManager\PluginManager.cpp" />
+    <ClCompile Include="PluginInterface\RichParameters.cpp" />
+    <ClCompile Include="Release\moc_PluginManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="PluginInterface\ImageIOInterface.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DGCL_EXPORT_SHARED_LIB -DGCL_PLUGIN_SHARED_LIB -DOM_STATIC_BUILD -D_USE_MATH_DEFINES -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL "-I." "-I.\.." "-I.\..\.." "-I.\..\..\3rdparty\include" "-ID:\qt\5.4\msvc2013_opengl\include" "-ID:\qt\5.4\msvc2013_opengl\include\QtOpenGL" "-ID:\qt\5.4\msvc2013_opengl\include\QtWidgets" "-ID:\qt\5.4\msvc2013_opengl\include\QtGui" "-ID:\qt\5.4\msvc2013_opengl\include\QtCore" "-I.\release" "-ID:\qt\5.4\msvc2013_opengl\mkspecs\win32-msvc2013"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing ImageIOInterface.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DGCL_EXPORT_SHARED_LIB -DGCL_PLUGIN_SHARED_LIB -DOM_STATIC_BUILD -D_USE_MATH_DEFINES -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_WINDLL "-I." "-I.\.." "-I.\..\.." "-I.\..\..\3rdparty\include" "-ID:\qt\5.4\msvc2013_opengl\include" "-ID:\qt\5.4\msvc2013_opengl\include\QtOpenGL" "-ID:\qt\5.4\msvc2013_opengl\include\QtWidgets" "-ID:\qt\5.4\msvc2013_opengl\include\QtGui" "-ID:\qt\5.4\msvc2013_opengl\include\QtCore" "-I.\debug" "-ID:\qt\5.4\msvc2013_opengl\mkspecs\win32-msvc2013"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing ImageIOInterface.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="PluginInterface\MeshFilterInterface.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DGCL_EXPORT_SHARED_LIB -DGCL_PLUGIN_SHARED_LIB -DOM_STATIC_BUILD -D_USE_MATH_DEFINES -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL "-I." "-I.\.." "-I.\..\.." "-I.\..\..\3rdparty\include" "-ID:\qt\5.4\msvc2013_opengl\include" "-ID:\qt\5.4\msvc2013_opengl\include\QtOpenGL" "-ID:\qt\5.4\msvc2013_opengl\include\QtWidgets" "-ID:\qt\5.4\msvc2013_opengl\include\QtGui" "-ID:\qt\5.4\msvc2013_opengl\include\QtCore" "-I.\release" "-ID:\qt\5.4\msvc2013_opengl\mkspecs\win32-msvc2013"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing MeshFilterInterface.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DGCL_EXPORT_SHARED_LIB -DGCL_PLUGIN_SHARED_LIB -DOM_STATIC_BUILD -D_USE_MATH_DEFINES -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_WINDLL "-I." "-I.\.." "-I.\..\.." "-I.\..\..\3rdparty\include" "-ID:\qt\5.4\msvc2013_opengl\include" "-ID:\qt\5.4\msvc2013_opengl\include\QtOpenGL" "-ID:\qt\5.4\msvc2013_opengl\include\QtWidgets" "-ID:\qt\5.4\msvc2013_opengl\include\QtGui" "-ID:\qt\5.4\msvc2013_opengl\include\QtCore" "-I.\debug" "-ID:\qt\5.4\msvc2013_opengl\mkspecs\win32-msvc2013"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing MeshFilterInterface.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="PluginInterface\MeshIOInterface.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DGCL_EXPORT_SHARED_LIB -DGCL_PLUGIN_SHARED_LIB -DOM_STATIC_BUILD -D_USE_MATH_DEFINES -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL "-I." "-I.\.." "-I.\..\.." "-I.\..\..\3rdparty\include" "-ID:\qt\5.4\msvc2013_opengl\include" "-ID:\qt\5.4\msvc2013_opengl\include\QtOpenGL" "-ID:\qt\5.4\msvc2013_opengl\include\QtWidgets" "-ID:\qt\5.4\msvc2013_opengl\include\QtGui" "-ID:\qt\5.4\msvc2013_opengl\include\QtCore" "-I.\release" "-ID:\qt\5.4\msvc2013_opengl\mkspecs\win32-msvc2013"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing MeshIOInterface.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DGCL_EXPORT_SHARED_LIB -DGCL_PLUGIN_SHARED_LIB -DOM_STATIC_BUILD -D_USE_MATH_DEFINES -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_WINDLL "-I." "-I.\.." "-I.\..\.." "-I.\..\..\3rdparty\include" "-ID:\qt\5.4\msvc2013_opengl\include" "-ID:\qt\5.4\msvc2013_opengl\include\QtOpenGL" "-ID:\qt\5.4\msvc2013_opengl\include\QtWidgets" "-ID:\qt\5.4\msvc2013_opengl\include\QtGui" "-ID:\qt\5.4\msvc2013_opengl\include\QtCore" "-I.\debug" "-ID:\qt\5.4\msvc2013_opengl\mkspecs\win32-msvc2013"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing MeshIOInterface.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="PluginInterface\NormalPluginInterface.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DGCL_EXPORT_SHARED_LIB -DGCL_PLUGIN_SHARED_LIB -DOM_STATIC_BUILD -D_USE_MATH_DEFINES -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL "-I." "-I.\.." "-I.\..\.." "-I.\..\..\3rdparty\include" "-ID:\qt\5.4\msvc2013_opengl\include" "-ID:\qt\5.4\msvc2013_opengl\include\QtOpenGL" "-ID:\qt\5.4\msvc2013_opengl\include\QtWidgets" "-ID:\qt\5.4\msvc2013_opengl\include\QtGui" "-ID:\qt\5.4\msvc2013_opengl\include\QtCore" "-I.\release" "-ID:\qt\5.4\msvc2013_opengl\mkspecs\win32-msvc2013"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing NormalPluginInterface.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DGCL_EXPORT_SHARED_LIB -DGCL_PLUGIN_SHARED_LIB -DOM_STATIC_BUILD -D_USE_MATH_DEFINES -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_WINDLL "-I." "-I.\.." "-I.\..\.." "-I.\..\..\3rdparty\include" "-ID:\qt\5.4\msvc2013_opengl\include" "-ID:\qt\5.4\msvc2013_opengl\include\QtOpenGL" "-ID:\qt\5.4\msvc2013_opengl\include\QtWidgets" "-ID:\qt\5.4\msvc2013_opengl\include\QtGui" "-ID:\qt\5.4\msvc2013_opengl\include\QtCore" "-I.\debug" "-ID:\qt\5.4\msvc2013_opengl\mkspecs\win32-msvc2013"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing NormalPluginInterface.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="PluginInterface\PluginInterface.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DGCL_EXPORT_SHARED_LIB -DGCL_PLUGIN_SHARED_LIB -DOM_STATIC_BUILD -D_USE_MATH_DEFINES -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL "-I." "-I.\.." "-I.\..\.." "-I.\..\..\3rdparty\include" "-ID:\qt\5.4\msvc2013_opengl\include" "-ID:\qt\5.4\msvc2013_opengl\include\QtOpenGL" "-ID:\qt\5.4\msvc2013_opengl\include\QtWidgets" "-ID:\qt\5.4\msvc2013_opengl\include\QtGui" "-ID:\qt\5.4\msvc2013_opengl\include\QtCore" "-I.\release" "-ID:\qt\5.4\msvc2013_opengl\mkspecs\win32-msvc2013"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing PluginInterface.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DGCL_EXPORT_SHARED_LIB -DGCL_PLUGIN_SHARED_LIB -DOM_STATIC_BUILD -D_USE_MATH_DEFINES -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_WINDLL "-I." "-I.\.." "-I.\..\.." "-I.\..\..\3rdparty\include" "-ID:\qt\5.4\msvc2013_opengl\include" "-ID:\qt\5.4\msvc2013_opengl\include\QtOpenGL" "-ID:\qt\5.4\msvc2013_opengl\include\QtWidgets" "-ID:\qt\5.4\msvc2013_opengl\include\QtGui" "-ID:\qt\5.4\msvc2013_opengl\include\QtCore" "-I.\debug" "-ID:\qt\5.4\msvc2013_opengl\mkspecs\win32-msvc2013"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing PluginInterface.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="PluginManager\PluginManager.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DGCL_EXPORT_SHARED_LIB -DGCL_PLUGIN_SHARED_LIB -DOM_STATIC_BUILD -D_USE_MATH_DEFINES -DQT_NO_DEBUG -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -D_WINDLL "-I." "-I.\.." "-I.\..\.." "-I.\..\..\3rdparty\include" "-ID:\qt\5.4\msvc2013_opengl\include" "-ID:\qt\5.4\msvc2013_opengl\include\QtOpenGL" "-ID:\qt\5.4\msvc2013_opengl\include\QtWidgets" "-ID:\qt\5.4\msvc2013_opengl\include\QtGui" "-ID:\qt\5.4\msvc2013_opengl\include\QtCore" "-I.\release" "-ID:\qt\5.4\msvc2013_opengl\mkspecs\win32-msvc2013"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing PluginManager.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+
+if errorlevel 1 goto VCEnd
+endlocal
+"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o "$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DGCL_EXPORT_SHARED_LIB -DGCL_PLUGIN_SHARED_LIB -DOM_STATIC_BUILD -D_USE_MATH_DEFINES -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_WINDLL "-I." "-I.\.." "-I.\..\.." "-I.\..\..\3rdparty\include" "-ID:\qt\5.4\msvc2013_opengl\include" "-ID:\qt\5.4\msvc2013_opengl\include\QtOpenGL" "-ID:\qt\5.4\msvc2013_opengl\include\QtWidgets" "-ID:\qt\5.4\msvc2013_opengl\include\QtGui" "-ID:\qt\5.4\msvc2013_opengl\include\QtCore" "-I.\debug" "-ID:\qt\5.4\msvc2013_opengl\mkspecs\win32-msvc2013"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing PluginManager.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="PluginInterface\RichParameters.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Release\moc_ImageIOInterface.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_MeshFilterInterface.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_MeshIOInterface.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_NormalPluginInterface.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Release\moc_PluginInterface.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties UicDir=".\GeneratedFiles" RccDir=".\GeneratedFiles" Qt5Version_x0020_Win32="5.4.1" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

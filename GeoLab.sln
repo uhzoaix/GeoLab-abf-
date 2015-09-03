@@ -1,0 +1,66 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GeoLabCore", "Core\GeoLabCore.vcxproj", "{7B068FEB-4AE9-3138-9A35-19C012FDADBB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GeoLabPluginCore", "PluginCore\GeoLabPluginCore.vcxproj", "{ADD307AC-266B-355B-BD35-932B09D6AEA3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GeoLabGui", "GUI\GeoLabGui.vcxproj", "{DFBC1560-1930-3873-9786-95B8AF5DFBAC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GeoLab", "Main\GeoLab.vcxproj", "{665AD42C-622C-3ED0-A96C-367FF0138E0A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenMeshAlgorithms", "Utilities\OpenMeshAlgorithms\OpenMeshAlgorithms.vcxproj", "{A6AC7CAF-E9D8-38E3-A5BA-D0FBB57F5484}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "filter_smooth_laplacian", "Plugins\filter_smooth_laplacian\filter_smooth_laplacian.vcxproj", "{CA86E1AA-9B3A-3958-997D-103C3BF647C1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "filter_parametrization_abfpp", "Plugins\filter_parametrization_abfpp\filter_parametrization_abfpp.vcxproj", "{556032D9-FA28-30D5-B92D-4C3936619B3B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "io_base", "Plugins\io_base\io_base.vcxproj", "{534F513A-A40C-377F-BDF0-0009403CBBDF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B068FEB-4AE9-3138-9A35-19C012FDADBB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7B068FEB-4AE9-3138-9A35-19C012FDADBB}.Debug|Win32.Build.0 = Debug|Win32
+		{7B068FEB-4AE9-3138-9A35-19C012FDADBB}.Release|Win32.ActiveCfg = Release|Win32
+		{7B068FEB-4AE9-3138-9A35-19C012FDADBB}.Release|Win32.Build.0 = Release|Win32
+		{ADD307AC-266B-355B-BD35-932B09D6AEA3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{ADD307AC-266B-355B-BD35-932B09D6AEA3}.Debug|Win32.Build.0 = Debug|Win32
+		{ADD307AC-266B-355B-BD35-932B09D6AEA3}.Release|Win32.ActiveCfg = Release|Win32
+		{ADD307AC-266B-355B-BD35-932B09D6AEA3}.Release|Win32.Build.0 = Release|Win32
+		{DFBC1560-1930-3873-9786-95B8AF5DFBAC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DFBC1560-1930-3873-9786-95B8AF5DFBAC}.Debug|Win32.Build.0 = Debug|Win32
+		{DFBC1560-1930-3873-9786-95B8AF5DFBAC}.Release|Win32.ActiveCfg = Release|Win32
+		{DFBC1560-1930-3873-9786-95B8AF5DFBAC}.Release|Win32.Build.0 = Release|Win32
+		{665AD42C-622C-3ED0-A96C-367FF0138E0A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{665AD42C-622C-3ED0-A96C-367FF0138E0A}.Debug|Win32.Build.0 = Debug|Win32
+		{665AD42C-622C-3ED0-A96C-367FF0138E0A}.Release|Win32.ActiveCfg = Release|Win32
+		{665AD42C-622C-3ED0-A96C-367FF0138E0A}.Release|Win32.Build.0 = Release|Win32
+		{A6AC7CAF-E9D8-38E3-A5BA-D0FBB57F5484}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A6AC7CAF-E9D8-38E3-A5BA-D0FBB57F5484}.Debug|Win32.Build.0 = Debug|Win32
+		{A6AC7CAF-E9D8-38E3-A5BA-D0FBB57F5484}.Release|Win32.ActiveCfg = Release|Win32
+		{A6AC7CAF-E9D8-38E3-A5BA-D0FBB57F5484}.Release|Win32.Build.0 = Release|Win32
+		{CA86E1AA-9B3A-3958-997D-103C3BF647C1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CA86E1AA-9B3A-3958-997D-103C3BF647C1}.Debug|Win32.Build.0 = Debug|Win32
+		{CA86E1AA-9B3A-3958-997D-103C3BF647C1}.Release|Win32.ActiveCfg = Release|Win32
+		{CA86E1AA-9B3A-3958-997D-103C3BF647C1}.Release|Win32.Build.0 = Release|Win32
+		{556032D9-FA28-30D5-B92D-4C3936619B3B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{556032D9-FA28-30D5-B92D-4C3936619B3B}.Debug|Win32.Build.0 = Debug|Win32
+		{556032D9-FA28-30D5-B92D-4C3936619B3B}.Release|Win32.ActiveCfg = Release|Win32
+		{556032D9-FA28-30D5-B92D-4C3936619B3B}.Release|Win32.Build.0 = Release|Win32
+		{534F513A-A40C-377F-BDF0-0009403CBBDF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{534F513A-A40C-377F-BDF0-0009403CBBDF}.Debug|Win32.Build.0 = Debug|Win32
+		{534F513A-A40C-377F-BDF0-0009403CBBDF}.Release|Win32.ActiveCfg = Release|Win32
+		{534F513A-A40C-377F-BDF0-0009403CBBDF}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		Qt5Version = 5.4.1
+	EndGlobalSection
+EndGlobal
